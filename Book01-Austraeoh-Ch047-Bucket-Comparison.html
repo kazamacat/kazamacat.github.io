@@ -1,0 +1,627 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Austraeoh Chapter 47: Bucket Comparison</title>
+<style type="text/css">
+<!--
+table {margin: 0; border: 1px solid #a0a0a0; box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);}
+td,th {word-break: normal; font-size: 12pt;padding: 0 3px;}
+tr { vertical-align: top; }
+.title {color: white; background-color: blue; vertical-align: top; padding: 4px 4px; background: linear-gradient(mediumblue, darkblue);}
+.sf3b2 {color: #000000; background-color: #ffffff; }
+.sf3b5 {color: #000000; background-color: #0078d7; }
+.sf3b14 {color: #000000; background-color: #ffa0a0; }
+.sf3b16 {color: #000000; background-color: #f1e2ad; }
+.sf3b18 {color: #000000; background-color: #ffaa82; }
+.sf3b19 {color: #000000; background-color: #c8816c; }
+.sf6b2 {color: #ffffff; background-color: #ffffff; }
+.sf6b5 {color: #ffffff; background-color: #0078d7; }
+.sf6b14 {color: #ffffff; background-color: #ffa0a0; }
+.sf6b16 {color: #ffffff; background-color: #f1e2ad; }
+.sf6b18 {color: #ffffff; background-color: #ffaa82; }
+.sf6b19 {color: #ffffff; background-color: #c8816c; }
+.sf7b2 {color: #0000ff; background-color: #ffffff; font-weight: bold; }
+.sf7b5 {color: #0000ff; background-color: #0078d7; font-weight: bold; }
+.sf7b14 {color: #0000ff; background-color: #ffa0a0; font-weight: bold; }
+.sf7b16 {color: #0000ff; background-color: #f1e2ad; font-weight: bold; }
+.sf7b18 {color: #0000ff; background-color: #ffaa82; font-weight: bold; }
+.sf7b19 {color: #0000ff; background-color: #c8816c; font-weight: bold; }
+.sf8b2 {color: #800080; background-color: #ffffff; }
+.sf8b5 {color: #800080; background-color: #0078d7; }
+.sf8b14 {color: #800080; background-color: #ffa0a0; }
+.sf8b16 {color: #800080; background-color: #f1e2ad; }
+.sf8b18 {color: #800080; background-color: #ffaa82; }
+.sf8b19 {color: #800080; background-color: #c8816c; }
+.sf9b2 {color: #008000; background-color: #ffffff; }
+.sf9b5 {color: #008000; background-color: #0078d7; }
+.sf9b14 {color: #008000; background-color: #ffa0a0; }
+.sf9b16 {color: #008000; background-color: #f1e2ad; }
+.sf9b18 {color: #008000; background-color: #ffaa82; }
+.sf9b19 {color: #008000; background-color: #c8816c; }
+.sf10b2 {color: #ff0000; background-color: #ffffff; }
+.sf10b5 {color: #ff0000; background-color: #0078d7; }
+.sf10b14 {color: #ff0000; background-color: #ffa0a0; }
+.sf10b16 {color: #ff0000; background-color: #f1e2ad; }
+.sf10b18 {color: #ff0000; background-color: #ffaa82; }
+.sf10b19 {color: #ff0000; background-color: #c8816c; }
+.sf11b2 {color: #606060; background-color: #ffffff; }
+.sf11b5 {color: #606060; background-color: #0078d7; }
+.sf11b14 {color: #606060; background-color: #ffa0a0; }
+.sf11b16 {color: #606060; background-color: #f1e2ad; }
+.sf11b18 {color: #606060; background-color: #ffaa82; }
+.sf11b19 {color: #606060; background-color: #c8816c; }
+.sf12b2 {color: #800000; background-color: #ffffff; }
+.sf12b5 {color: #800000; background-color: #0078d7; }
+.sf12b14 {color: #800000; background-color: #ffa0a0; }
+.sf12b16 {color: #800000; background-color: #f1e2ad; }
+.sf12b18 {color: #800000; background-color: #ffaa82; }
+.sf12b19 {color: #800000; background-color: #c8816c; }
+.sf13b2 {color: #0080c0; background-color: #ffffff; }
+.sf13b5 {color: #0080c0; background-color: #0078d7; }
+.sf13b14 {color: #0080c0; background-color: #ffa0a0; }
+.sf13b16 {color: #0080c0; background-color: #f1e2ad; }
+.sf13b18 {color: #0080c0; background-color: #ffaa82; }
+.sf13b19 {color: #0080c0; background-color: #c8816c; }
+.sf15b2 {color: #000000; background-color: #ffffff; }
+.sf15b5 {color: #000000; background-color: #0078d7; }
+.sf15b14 {color: #000000; background-color: #ffa0a0; }
+.sf15b16 {color: #000000; background-color: #f1e2ad; }
+.sf15b18 {color: #000000; background-color: #ffaa82; }
+.sf15b19 {color: #000000; background-color: #c8816c; }
+.sf17b2 {color: #000000; background-color: #ffffff; }
+.sf17b5 {color: #000000; background-color: #0078d7; }
+.sf17b14 {color: #000000; background-color: #ffa0a0; }
+.sf17b16 {color: #000000; background-color: #f1e2ad; }
+.sf17b18 {color: #000000; background-color: #ffaa82; }
+.sf17b19 {color: #000000; background-color: #c8816c; }
+.sf20b2 {color: #000080; background-color: #ffffff; }
+.sf20b5 {color: #000080; background-color: #0078d7; }
+.sf20b14 {color: #000080; background-color: #ffa0a0; }
+.sf20b16 {color: #000080; background-color: #f1e2ad; }
+.sf20b18 {color: #000080; background-color: #ffaa82; }
+.sf20b19 {color: #000080; background-color: #c8816c; }
+.sf21b2 {color: #0080c0; background-color: #ffffff; }
+.sf21b5 {color: #0080c0; background-color: #0078d7; }
+.sf21b14 {color: #0080c0; background-color: #ffa0a0; }
+.sf21b16 {color: #0080c0; background-color: #f1e2ad; }
+.sf21b18 {color: #0080c0; background-color: #ffaa82; }
+.sf21b19 {color: #0080c0; background-color: #c8816c; }
+.sf3b2i {color: #ababab; background-color: #ffffff; }
+.sf3b5i {color: #005190; background-color: #0078d7; }
+.sf3b14i {color: #ab6b6b; background-color: #ffa0a0; }
+.sf3b16i {color: #a19774; background-color: #f1e2ad; }
+.sf3b18i {color: #ab7257; background-color: #ffaa82; }
+.sf3b19i {color: #865749; background-color: #c8816c; }
+.sf6b2i {color: #ffffff; background-color: #ffffff; }
+.sf6b5i {color: #54a4e4; background-color: #0078d7; }
+.sf6b14i {color: #ffbfbf; background-color: #ffa0a0; }
+.sf6b16i {color: #f5ebc8; background-color: #f1e2ad; }
+.sf6b18i {color: #ffc6ab; background-color: #ffaa82; }
+.sf6b19i {color: #daaa9c; background-color: #c8816c; }
+.sf7b2i {color: #ababff; background-color: #ffffff; font-weight: bold; }
+.sf7b5i {color: #0051e4; background-color: #0078d7; font-weight: bold; }
+.sf7b14i {color: #ab6bbf; background-color: #ffa0a0; font-weight: bold; }
+.sf7b16i {color: #a197c8; background-color: #f1e2ad; font-weight: bold; }
+.sf7b18i {color: #ab72ab; background-color: #ffaa82; font-weight: bold; }
+.sf7b19i {color: #86579c; background-color: #c8816c; font-weight: bold; }
+.sf8b2i {color: #d5abd5; background-color: #ffffff; }
+.sf8b5i {color: #2a51bb; background-color: #0078d7; }
+.sf8b14i {color: #d56b96; background-color: #ffa0a0; }
+.sf8b16i {color: #cc979f; background-color: #f1e2ad; }
+.sf8b18i {color: #d57282; background-color: #ffaa82; }
+.sf8b19i {color: #b15772; background-color: #c8816c; }
+.sf9b2i {color: #abd5ab; background-color: #ffffff; }
+.sf9b5i {color: #007a90; background-color: #0078d7; }
+.sf9b14i {color: #ab966b; background-color: #ffa0a0; }
+.sf9b16i {color: #a1c274; background-color: #f1e2ad; }
+.sf9b18i {color: #ab9d57; background-color: #ffaa82; }
+.sf9b19i {color: #868149; background-color: #c8816c; }
+.sf10b2i {color: #ffabab; background-color: #ffffff; }
+.sf10b5i {color: #545190; background-color: #0078d7; }
+.sf10b14i {color: #ff6b6b; background-color: #ffa0a0; }
+.sf10b16i {color: #f59774; background-color: #f1e2ad; }
+.sf10b18i {color: #ff7257; background-color: #ffaa82; }
+.sf10b19i {color: #da5749; background-color: #c8816c; }
+.sf11b2i {color: #cbcbcb; background-color: #ffffff; }
+.sf11b5i {color: #1f71b0; background-color: #0078d7; }
+.sf11b14i {color: #cb8b8b; background-color: #ffa0a0; }
+.sf11b16i {color: #c1b794; background-color: #f1e2ad; }
+.sf11b18i {color: #cb9277; background-color: #ffaa82; }
+.sf11b19i {color: #a67769; background-color: #c8816c; }
+.sf12b2i {color: #d5abab; background-color: #ffffff; }
+.sf12b5i {color: #2a5190; background-color: #0078d7; }
+.sf12b14i {color: #d56b6b; background-color: #ffa0a0; }
+.sf12b16i {color: #cc9774; background-color: #f1e2ad; }
+.sf12b18i {color: #d57257; background-color: #ffaa82; }
+.sf12b19i {color: #b15749; background-color: #c8816c; }
+.sf13b2i {color: #abd5eb; background-color: #ffffff; }
+.sf13b5i {color: #007ad0; background-color: #0078d7; }
+.sf13b14i {color: #ab96aa; background-color: #ffa0a0; }
+.sf13b16i {color: #a1c2b3; background-color: #f1e2ad; }
+.sf13b18i {color: #ab9d96; background-color: #ffaa82; }
+.sf13b19i {color: #868187; background-color: #c8816c; }
+.sf15b2i {color: #ababab; background-color: #ffffff; }
+.sf15b5i {color: #005190; background-color: #0078d7; }
+.sf15b14i {color: #ab6b6b; background-color: #ffa0a0; }
+.sf15b16i {color: #a19774; background-color: #f1e2ad; }
+.sf15b18i {color: #ab7257; background-color: #ffaa82; }
+.sf15b19i {color: #865749; background-color: #c8816c; }
+.sf17b2i {color: #ababab; background-color: #ffffff; }
+.sf17b5i {color: #005190; background-color: #0078d7; }
+.sf17b14i {color: #ab6b6b; background-color: #ffa0a0; }
+.sf17b16i {color: #a19774; background-color: #f1e2ad; }
+.sf17b18i {color: #ab7257; background-color: #ffaa82; }
+.sf17b19i {color: #865749; background-color: #c8816c; }
+.sf20b2i {color: #ababd5; background-color: #ffffff; }
+.sf20b5i {color: #0051bb; background-color: #0078d7; }
+.sf20b14i {color: #ab6b96; background-color: #ffa0a0; }
+.sf20b16i {color: #a1979f; background-color: #f1e2ad; }
+.sf20b18i {color: #ab7282; background-color: #ffaa82; }
+.sf20b19i {color: #865772; background-color: #c8816c; }
+.sf21b2i {color: #abd5eb; background-color: #ffffff; }
+.sf21b5i {color: #007ad0; background-color: #0078d7; }
+.sf21b14i {color: #ab96aa; background-color: #ffa0a0; }
+.sf21b16i {color: #a1c2b3; background-color: #f1e2ad; }
+.sf21b18i {color: #ab9d96; background-color: #ffaa82; }
+.sf21b19i {color: #868187; background-color: #c8816c; }
+.ln {text-align: right; word-break: normal; color: #000000; background-color: #f0f0f0;}
+-->
+</style>
+</head>
+<body>
+<table cellspacing="0" cellpadding="0" style="width:100%;">
+<colgroup>
+<col style="width: 0.5em;" />
+<col style="width: calc(100% / 2 - 0.5em);" />
+<col style="width: 0.5em;" />
+<col style="width: calc(100% / 2 - 0.5em);" />
+</colgroup>
+<thead>
+<tr>
+<th colspan="2" class="title">Original Text</th>
+<th colspan="2" class="title">Audiobook Transcription</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">It had been nearly a day, but there was still debris left over from the last entanglement with the invading creatures. While all the citizens of Windthrow were busy chatting, haggling, trading, and carrying on with their own little businesses, one pony was left to clean up what remained of the mess.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">It had been nearly a day, but there was still debris left over from the last entanglement with the invading creatures. While all the citizens of Windthrow were busy chatting, haggling, trading, and carrying on with their own little businesses, one pony was left to clean up what remained of the mess.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Gold Petals sighed as she grabbed several chunks of loose wood and tossed them into a wagon behind her. A splintery pile of junk had formed in the back of the cart. She added to this refuse slowly, lethargically, as if begging for time to slow down around her.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Gold Petals sighed as she grabbed several chunks of loose wood and tossed them into a wagon behind her. A splintery pile of junk had formed in the back of the cart. She added to this refuse slowly, lethargically, as if begging for time to slow down around her.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">She came upon a large, overturned bucket. Reaching for it, she paused. Gold Plate looked up and gazed across the central courtyard of Windthrow. Across the way, an old mare and an old stallion were trotting side by side, carrying saddlebags full of mining wares. They chatted with a local blacksmith, their faces shadowed and serious.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">She came upon a large, overturned bucket. Reaching for it, she paused. Gold Plate looked up and gazed across the central courtyard of Windthrow. Across the way, an old mare and an old stallion were trotting side by side, carrying saddlebags full of mining wares. They chatted with a local blacksmith, their faces shadowed and serious.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"><a name="d1" href="#d1">.</a></td><td style="color: #000000; background-color: #efcb05; "><code><span style="color: #000000; background-color: #efcb05; ">A deep breath came out of Gold Petals. She sat back on her haunche</span><span class="sf17b16">d</span><span style="color: #000000; background-color: #efcb05; ">, pulled her hood down, and ran a hoof through her short blonde threads. She briefly looked like a pony three times her years, and equally as dull.</span></code></td>
+<td class="ln"></td><td style="color: #000000; background-color: #efcb05; "><code><span style="color: #000000; background-color: #efcb05; ">A deep breath came out of Gold Petals. She sat back on her haunche</span><span class="sf17b16">s</span><span style="color: #000000; background-color: #efcb05; ">, pulled her hood down, and ran a hoof through her short blonde threads. She briefly looked like a pony three times her years, and equally as dull.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Are they your parents or something?”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Are they your parents or something?”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Gold Petals jumped back onto her hooves with a gasp. She winced, rolled her eyes, and growled over her shoulder. “You really gotta stop doing that.”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Gold Petals jumped back onto her hooves with a gasp. She winced, rolled her eyes, and growled over her shoulder. “You really gotta stop doing that.”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Can't help it.” Rainbow Dash hovered down behind her. “I think in three dimensions.”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Can't help it.” Rainbow Dash hovered down behind her. “I think in three dimensions.”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Uh huh...”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Uh huh...”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Nothing against earth ponies. If the sky was made of turnips, I'm sure they'd think beyond two dimensions as well—”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Nothing against earth ponies. If the sky was made of turnips, I'm sure they'd think beyond two dimensions as well—”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Did you find out anything from your trip to the mine?”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Did you find out anything from your trip to the mine?”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Only that it's a mine and it's deep and there's this weird—” Rainbow Dash paused, gulped, and said, “I met Fulltrot there.”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Only that it's a mine and it's deep and there's this weird—” Rainbow Dash paused, gulped, and said, “I met Fulltrot there.”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Funny.” Gold Plate turned her flank to the wooden bucket. “I thought you went down there to talk to Sladesteed.”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Funny.” Gold Plate turned her flank to the wooden bucket. “I thought you went down there to talk to Sladesteed.”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Well. Y-yeah. I kinda did...”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Well. Y-yeah. I kinda did...”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“And what became of that?”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“And what became of that?”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“He pretty much blew a lot of hot air. I guess it comes in handy way deep in the mines. Heh.” Rainbow Dash smirked tiredly into the shadows of the nearby alleyway. “So, like. Seriously. Are they your parents?”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“He pretty much blew a lot of hot air. I guess it comes in handy way deep in the mines. Heh.” Rainbow Dash smirked tiredly into the shadows of the nearby alleyway. “So, like. Seriously. Are they your parents?”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Mmmf...” Gold Petals picked a few shredded pieces of rope and tossed them into the cart.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Mmmf...” Gold Petals picked a few shredded pieces of rope and tossed them into the cart.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Rainbow Dash raised an eyebrow. “Well?”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Rainbow Dash raised an eyebrow. “Well?”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Yeah...” Gold Petals muttered. “For what it's worth.”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Yeah...” Gold Petals muttered. “For what it's worth.”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Rainbow Dash leaned her head curiously to the side. “That's a weird thing to say. I thought earth ponies were crazy-respectful of their folks and stuff.”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Rainbow Dash leaned her head curiously to the side. “That's a weird thing to say. I thought earth ponies were crazy-respectful of their folks and stuff.”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Aren't all ponies?”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Aren't all ponies?”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“I never knew my parents,” Rainbow Dash said. “But that's kind of typical for pegasi. It's hard to make a homestead in the clouds. And... heh...” She winked at Gold Petals playfully. “When you can fly, it's a lot easier to get away with one night hovers.”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“I never knew my parents,” Rainbow Dash said. “But that's kind of typical for pegasi. It's hard to make a homestead in the clouds. And... heh...” She winked at Gold Petals playfully. “When you can fly, it's a lot easier to get away with one night hovers.”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Guess that explains a lot about you.”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Guess that explains a lot about you.”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"><a name="d2" href="#d2">.</a></td><td style="color: #000000; background-color: #efcb05; "><code><span style="color: #000000; background-color: #efcb05; ">Rainbow Dash blinked. “What's that supposed to me</span><span style="color: #000000; background-color: #efcb05; ">?”</span></code></td>
+<td class="ln"></td><td style="color: #000000; background-color: #efcb05; "><code><span style="color: #000000; background-color: #efcb05; ">Rainbow Dash blinked. “What's that supposed to me</span><span class="sf17b18">an</span><span style="color: #000000; background-color: #efcb05; ">?”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Gold Petals merely paced around the cart. “I figure that I don't need a family. I can take care of myself. Besides, who needs a bunch of old horses that will just make you feel bad?”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Gold Petals merely paced around the cart. “I figure that I don't need a family. I can take care of myself. Besides, who needs a bunch of old horses that will just make you feel bad?”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Rainbow Dash looked thoughtfully at her. “Did you guys have a falling out?”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Rainbow Dash looked thoughtfully at her. “Did you guys have a falling out?”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“That assumes I was anywhere high to fall from to begin with,” Gold Petals murmured. She frowned Rainbow Dash's way. “Why do souls in this world have to be all bothersome and judgmental of other souls?”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“That assumes I was anywhere high to fall from to begin with,” Gold Petals murmured. She frowned Rainbow Dash's way. “Why do souls in this world have to be all bothersome and judgmental of other souls?”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Cuz if we bothered and judged ourselves all the time, we'd get bored really quick?”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Cuz if we bothered and judged ourselves all the time, we'd get bored really quick?”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Is that all you ever think about? What's boring versus what's exciting?”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Is that all you ever think about? What's boring versus what's exciting?”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“If it helps me to think about it all the time, then sure!” Rainbow Dash said. “What gets you going on your own road so long, even if it's just your own road and nopony else's?”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“If it helps me to think about it all the time, then sure!” Rainbow Dash said. “What gets you going on your own road so long, even if it's just your own road and nopony else's?”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“I'm not like you.”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“I'm not like you.”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“That's kind of why I asked the question, don't you think?”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“That's kind of why I asked the question, don't you think?”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Gold Petals shifted where she stood. She gazed lonesomely at the two ponies across the courtyard. “It's not like they don't know I'm here, that I still work for Fulltrot. I guess a part of me just hopes that someday they'll come to their senses, that they'll accept me for who I am... for what I am...”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Gold Petals shifted where she stood. She gazed lonesomely at the two ponies across the courtyard. “It's not like they don't know I'm here, that I still work for Fulltrot. I guess a part of me just hopes that someday they'll come to their senses, that they'll accept me for who I am... for what I am...”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Rainbow Dash opened her mouth, but paused. She bit her lip briefly, feeling the weight of her saddlebag, and a certain golden delicious fruit that she had left inside there days ago. Clearing her throat, she decided to say, “Well, Sladesteed doesn't know anything about where the creatures are coming from, and there certainly aren't any of them inside the caves. Hushtail doesn't seem to want to try and learn more about these monsters. And poor Fulltrot is caught in the center, too weak and too old to properly do anything his wisdom tells him to.”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Rainbow Dash opened her mouth, but paused. She bit her lip briefly, feeling the weight of her saddlebag, and a certain golden delicious fruit that she had left inside there days ago. Clearing her throat, she decided to say, “Well, Sladesteed doesn't know anything about where the creatures are coming from, and there certainly aren't any of them inside the caves. Hushtail doesn't seem to want to try and learn more about these monsters. And poor Fulltrot is caught in the center, too weak and too old to properly do anything his wisdom tells him to.”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Yeah...?” Gold Petals squinted at her. “Care to tell me something I don't know?”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Yeah...?” Gold Petals squinted at her. “Care to tell me something I don't know?”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Is there any reason to?” Rainbow Dash said, her wings flexing. “This town just doesn't know how to pick itself up. I've never been to a place where so many ponies are so split on what to do or where to go that they instead decide to hang out exactly where they are and let the parasprites hit the fan. It's crazy. It's like you ponies are going nowhere. And, no matter what I try or do, I don't think there's any hope in this craziness changing—”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Is there any reason to?” Rainbow Dash said, her wings flexing. “This town just doesn't know how to pick itself up. I've never been to a place where so many ponies are so split on what to do or where to go that they instead decide to hang out exactly where they are and let the parasprites hit the fan. It's crazy. It's like you ponies are going nowhere. And, no matter what I try or do, I don't think there's any hope in this craziness changing—”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“You're leaving?”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“You're leaving?”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Rainbow Dash blinked at Gold Petals.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Rainbow Dash blinked at Gold Petals.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">She looked at her intently. Her expression was long. “You're leaving, aren't you?”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">She looked at her intently. Her expression was long. “You're leaving, aren't you?”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Look, I didn't say that—”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Look, I didn't say that—”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“But you're thinking it,” Gold Petals declared. She pointed. “You haven't even taken your saddlebag off since you got here. Don't tell me it's as important as that gold pendant around your neck.”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“But you're thinking it,” Gold Petals declared. She pointed. “You haven't even taken your saddlebag off since you got here. Don't tell me it's as important as that gold pendant around your neck.”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"><a name="d3" href="#d3">.</a></td><td style="color: #000000; background-color: #efcb05; "><code><span style="color: #000000; background-color: #efcb05; ">“I just... I just don't think that...” Rainbow Dash found herself at a loss for words. She avoided Gold Petals' gaze for a while, exhaled deeply, and said in a low voice</span><span class="sf17b16">.</span><span style="color: #000000; background-color: #efcb05; ">&nbsp;“There's nothing for me here. This town, these ponies—you're all spectacular and stuff, but you're not the ponies I'm loyal to.”</span></code></td>
+<td class="ln"></td><td style="color: #000000; background-color: #efcb05; "><code><span style="color: #000000; background-color: #efcb05; ">“I just... I just don't think that...” Rainbow Dash found herself at a loss for words. She avoided Gold Petals' gaze for a while, exhaled deeply, and said in a low voice</span><span class="sf17b16">,</span><span style="color: #000000; background-color: #efcb05; ">&nbsp;“There's nothing for me here. This town, these ponies—you're all spectacular and stuff, but you're not the ponies I'm loyal to.”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Then why tell me this?” Gold Petals asked sharply. “Why'd you come here to see me?”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Then why tell me this?” Gold Petals asked sharply. “Why'd you come here to see me?”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"><a name="d4" href="#d4">.</a></td><td style="color: #000000; background-color: #efcb05; "><code><span style="color: #000000; background-color: #efcb05; ">“Because...” Rainbow Dash shifted where she stood. She heard Gold Petals' </span><span class="sf17b16">foot</span><span style="color: #000000; background-color: #efcb05; ">steps coming closer, and she made an even greater effort to look away. “Well... uhm... you t-took care of me and stuff, y'know, after those monsters banged me up good.”</span></code></td>
+<td class="ln"></td><td style="color: #000000; background-color: #efcb05; "><code><span style="color: #000000; background-color: #efcb05; ">“Because...” Rainbow Dash shifted where she stood. She heard Gold Petals' </span><span class="sf17b16">hoof</span><span style="color: #000000; background-color: #efcb05; ">steps coming closer, and she made an even greater effort to look away. “Well... uhm... you t-took care of me and stuff, y'know, after those monsters banged me up good.”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Gold Petals was two breaths' distance at this point. “Is that the only reason?” she asked. It was a breathy tone, neither angry nor kind.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Gold Petals was two breaths' distance at this point. “Is that the only reason?” she asked. It was a breathy tone, neither angry nor kind.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Rainbow Dash bit her lip. She tilted her head towards Gold Petals' slightly. If she moved a single inch, their necks would make contact. “Yeah...” She eventually said. “That's the only reason.”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Rainbow Dash bit her lip. She tilted her head towards Gold Petals' slightly. If she moved a single inch, their necks would make contact. “Yeah...” She eventually said. “That's the only reason.”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">The air was quiet for a moment. The mists parted ways and were filled in once more.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">The air was quiet for a moment. The mists parted ways and were filled in once more.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">When Gold Petals spoke, it was in a low voice, like the hanging of her head. “You know how you said that there's nothing for you here?”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">When Gold Petals spoke, it was in a low voice, like the hanging of her head. “You know how you said that there's nothing for you here?”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Rainbow finally looked at her. “Yeah?”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Rainbow finally looked at her. “Yeah?”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"><a name="d5" href="#d5">.</a></td><td style="color: #000000; background-color: #efcb05; "><code><span style="color: #000000; background-color: #efcb05; ">Gold Petals glanced up, and her lip</span><span style="color: #000000; background-color: #efcb05; ">&nbsp;quivered. “Is there anything for you anywhere, Rainbow Dash?”</span></code></td>
+<td class="ln"></td><td style="color: #000000; background-color: #efcb05; "><code><span style="color: #000000; background-color: #efcb05; ">Gold Petals glanced up, and her lip</span><span class="sf17b18">s</span><span style="color: #000000; background-color: #efcb05; ">&nbsp;quivered. “Is there anything for you anywhere, Rainbow Dash?”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">She hesitated responding. Before the moment could become too stretched, there was a rattling noise to their flanks. Rainbow Dash and Gold Petals turned and squinted into the alleyway.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">She hesitated responding. Before the moment could become too stretched, there was a rattling noise to their flanks. Rainbow Dash and Gold Petals turned and squinted into the alleyway.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“What the...”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“What the...”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Where'd that come from?”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Where'd that come from?”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“I... I think something's under that bucket.”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“I... I think something's under that bucket.”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“What bucket—?”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“What bucket—?”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">With a shrieking noise, the wooden container exploded. A lone, bruised creature erupted into the air of Windthrow, streaking straight towards Rainbow Dash's skull.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">With a shrieking noise, the wooden container exploded. A lone, bruised creature erupted into the air of Windthrow, streaking straight towards Rainbow Dash's skull.</span></code></td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
