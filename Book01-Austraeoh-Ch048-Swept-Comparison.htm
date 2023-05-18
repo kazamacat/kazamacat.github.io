@@ -1,0 +1,428 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Austraeoh Chapter 48: Swept Comparison</title>
+<style type="text/css">
+<!--
+table {margin: 0; border: 1px solid #a0a0a0; box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);}
+td,th {word-break: normal; font-size: 12pt;padding: 0 3px;}
+tr { vertical-align: top; }
+.title {color: white; background-color: blue; vertical-align: top; padding: 4px 4px; background: linear-gradient(mediumblue, darkblue);}
+.sf3b2 {color: #000000; background-color: #ffffff; }
+.sf3b5 {color: #000000; background-color: #0078d7; }
+.sf3b14 {color: #000000; background-color: #ffa0a0; }
+.sf3b16 {color: #000000; background-color: #f1e2ad; }
+.sf3b18 {color: #000000; background-color: #ffaa82; }
+.sf3b19 {color: #000000; background-color: #c8816c; }
+.sf6b2 {color: #ffffff; background-color: #ffffff; }
+.sf6b5 {color: #ffffff; background-color: #0078d7; }
+.sf6b14 {color: #ffffff; background-color: #ffa0a0; }
+.sf6b16 {color: #ffffff; background-color: #f1e2ad; }
+.sf6b18 {color: #ffffff; background-color: #ffaa82; }
+.sf6b19 {color: #ffffff; background-color: #c8816c; }
+.sf7b2 {color: #0000ff; background-color: #ffffff; font-weight: bold; }
+.sf7b5 {color: #0000ff; background-color: #0078d7; font-weight: bold; }
+.sf7b14 {color: #0000ff; background-color: #ffa0a0; font-weight: bold; }
+.sf7b16 {color: #0000ff; background-color: #f1e2ad; font-weight: bold; }
+.sf7b18 {color: #0000ff; background-color: #ffaa82; font-weight: bold; }
+.sf7b19 {color: #0000ff; background-color: #c8816c; font-weight: bold; }
+.sf8b2 {color: #800080; background-color: #ffffff; }
+.sf8b5 {color: #800080; background-color: #0078d7; }
+.sf8b14 {color: #800080; background-color: #ffa0a0; }
+.sf8b16 {color: #800080; background-color: #f1e2ad; }
+.sf8b18 {color: #800080; background-color: #ffaa82; }
+.sf8b19 {color: #800080; background-color: #c8816c; }
+.sf9b2 {color: #008000; background-color: #ffffff; }
+.sf9b5 {color: #008000; background-color: #0078d7; }
+.sf9b14 {color: #008000; background-color: #ffa0a0; }
+.sf9b16 {color: #008000; background-color: #f1e2ad; }
+.sf9b18 {color: #008000; background-color: #ffaa82; }
+.sf9b19 {color: #008000; background-color: #c8816c; }
+.sf10b2 {color: #ff0000; background-color: #ffffff; }
+.sf10b5 {color: #ff0000; background-color: #0078d7; }
+.sf10b14 {color: #ff0000; background-color: #ffa0a0; }
+.sf10b16 {color: #ff0000; background-color: #f1e2ad; }
+.sf10b18 {color: #ff0000; background-color: #ffaa82; }
+.sf10b19 {color: #ff0000; background-color: #c8816c; }
+.sf11b2 {color: #606060; background-color: #ffffff; }
+.sf11b5 {color: #606060; background-color: #0078d7; }
+.sf11b14 {color: #606060; background-color: #ffa0a0; }
+.sf11b16 {color: #606060; background-color: #f1e2ad; }
+.sf11b18 {color: #606060; background-color: #ffaa82; }
+.sf11b19 {color: #606060; background-color: #c8816c; }
+.sf12b2 {color: #800000; background-color: #ffffff; }
+.sf12b5 {color: #800000; background-color: #0078d7; }
+.sf12b14 {color: #800000; background-color: #ffa0a0; }
+.sf12b16 {color: #800000; background-color: #f1e2ad; }
+.sf12b18 {color: #800000; background-color: #ffaa82; }
+.sf12b19 {color: #800000; background-color: #c8816c; }
+.sf13b2 {color: #0080c0; background-color: #ffffff; }
+.sf13b5 {color: #0080c0; background-color: #0078d7; }
+.sf13b14 {color: #0080c0; background-color: #ffa0a0; }
+.sf13b16 {color: #0080c0; background-color: #f1e2ad; }
+.sf13b18 {color: #0080c0; background-color: #ffaa82; }
+.sf13b19 {color: #0080c0; background-color: #c8816c; }
+.sf15b2 {color: #000000; background-color: #ffffff; }
+.sf15b5 {color: #000000; background-color: #0078d7; }
+.sf15b14 {color: #000000; background-color: #ffa0a0; }
+.sf15b16 {color: #000000; background-color: #f1e2ad; }
+.sf15b18 {color: #000000; background-color: #ffaa82; }
+.sf15b19 {color: #000000; background-color: #c8816c; }
+.sf17b2 {color: #000000; background-color: #ffffff; }
+.sf17b5 {color: #000000; background-color: #0078d7; }
+.sf17b14 {color: #000000; background-color: #ffa0a0; }
+.sf17b16 {color: #000000; background-color: #f1e2ad; }
+.sf17b18 {color: #000000; background-color: #ffaa82; }
+.sf17b19 {color: #000000; background-color: #c8816c; }
+.sf20b2 {color: #000080; background-color: #ffffff; }
+.sf20b5 {color: #000080; background-color: #0078d7; }
+.sf20b14 {color: #000080; background-color: #ffa0a0; }
+.sf20b16 {color: #000080; background-color: #f1e2ad; }
+.sf20b18 {color: #000080; background-color: #ffaa82; }
+.sf20b19 {color: #000080; background-color: #c8816c; }
+.sf21b2 {color: #0080c0; background-color: #ffffff; }
+.sf21b5 {color: #0080c0; background-color: #0078d7; }
+.sf21b14 {color: #0080c0; background-color: #ffa0a0; }
+.sf21b16 {color: #0080c0; background-color: #f1e2ad; }
+.sf21b18 {color: #0080c0; background-color: #ffaa82; }
+.sf21b19 {color: #0080c0; background-color: #c8816c; }
+.sf3b2i {color: #ababab; background-color: #ffffff; }
+.sf3b5i {color: #005190; background-color: #0078d7; }
+.sf3b14i {color: #ab6b6b; background-color: #ffa0a0; }
+.sf3b16i {color: #a19774; background-color: #f1e2ad; }
+.sf3b18i {color: #ab7257; background-color: #ffaa82; }
+.sf3b19i {color: #865749; background-color: #c8816c; }
+.sf6b2i {color: #ffffff; background-color: #ffffff; }
+.sf6b5i {color: #54a4e4; background-color: #0078d7; }
+.sf6b14i {color: #ffbfbf; background-color: #ffa0a0; }
+.sf6b16i {color: #f5ebc8; background-color: #f1e2ad; }
+.sf6b18i {color: #ffc6ab; background-color: #ffaa82; }
+.sf6b19i {color: #daaa9c; background-color: #c8816c; }
+.sf7b2i {color: #ababff; background-color: #ffffff; font-weight: bold; }
+.sf7b5i {color: #0051e4; background-color: #0078d7; font-weight: bold; }
+.sf7b14i {color: #ab6bbf; background-color: #ffa0a0; font-weight: bold; }
+.sf7b16i {color: #a197c8; background-color: #f1e2ad; font-weight: bold; }
+.sf7b18i {color: #ab72ab; background-color: #ffaa82; font-weight: bold; }
+.sf7b19i {color: #86579c; background-color: #c8816c; font-weight: bold; }
+.sf8b2i {color: #d5abd5; background-color: #ffffff; }
+.sf8b5i {color: #2a51bb; background-color: #0078d7; }
+.sf8b14i {color: #d56b96; background-color: #ffa0a0; }
+.sf8b16i {color: #cc979f; background-color: #f1e2ad; }
+.sf8b18i {color: #d57282; background-color: #ffaa82; }
+.sf8b19i {color: #b15772; background-color: #c8816c; }
+.sf9b2i {color: #abd5ab; background-color: #ffffff; }
+.sf9b5i {color: #007a90; background-color: #0078d7; }
+.sf9b14i {color: #ab966b; background-color: #ffa0a0; }
+.sf9b16i {color: #a1c274; background-color: #f1e2ad; }
+.sf9b18i {color: #ab9d57; background-color: #ffaa82; }
+.sf9b19i {color: #868149; background-color: #c8816c; }
+.sf10b2i {color: #ffabab; background-color: #ffffff; }
+.sf10b5i {color: #545190; background-color: #0078d7; }
+.sf10b14i {color: #ff6b6b; background-color: #ffa0a0; }
+.sf10b16i {color: #f59774; background-color: #f1e2ad; }
+.sf10b18i {color: #ff7257; background-color: #ffaa82; }
+.sf10b19i {color: #da5749; background-color: #c8816c; }
+.sf11b2i {color: #cbcbcb; background-color: #ffffff; }
+.sf11b5i {color: #1f71b0; background-color: #0078d7; }
+.sf11b14i {color: #cb8b8b; background-color: #ffa0a0; }
+.sf11b16i {color: #c1b794; background-color: #f1e2ad; }
+.sf11b18i {color: #cb9277; background-color: #ffaa82; }
+.sf11b19i {color: #a67769; background-color: #c8816c; }
+.sf12b2i {color: #d5abab; background-color: #ffffff; }
+.sf12b5i {color: #2a5190; background-color: #0078d7; }
+.sf12b14i {color: #d56b6b; background-color: #ffa0a0; }
+.sf12b16i {color: #cc9774; background-color: #f1e2ad; }
+.sf12b18i {color: #d57257; background-color: #ffaa82; }
+.sf12b19i {color: #b15749; background-color: #c8816c; }
+.sf13b2i {color: #abd5eb; background-color: #ffffff; }
+.sf13b5i {color: #007ad0; background-color: #0078d7; }
+.sf13b14i {color: #ab96aa; background-color: #ffa0a0; }
+.sf13b16i {color: #a1c2b3; background-color: #f1e2ad; }
+.sf13b18i {color: #ab9d96; background-color: #ffaa82; }
+.sf13b19i {color: #868187; background-color: #c8816c; }
+.sf15b2i {color: #ababab; background-color: #ffffff; }
+.sf15b5i {color: #005190; background-color: #0078d7; }
+.sf15b14i {color: #ab6b6b; background-color: #ffa0a0; }
+.sf15b16i {color: #a19774; background-color: #f1e2ad; }
+.sf15b18i {color: #ab7257; background-color: #ffaa82; }
+.sf15b19i {color: #865749; background-color: #c8816c; }
+.sf17b2i {color: #ababab; background-color: #ffffff; }
+.sf17b5i {color: #005190; background-color: #0078d7; }
+.sf17b14i {color: #ab6b6b; background-color: #ffa0a0; }
+.sf17b16i {color: #a19774; background-color: #f1e2ad; }
+.sf17b18i {color: #ab7257; background-color: #ffaa82; }
+.sf17b19i {color: #865749; background-color: #c8816c; }
+.sf20b2i {color: #ababd5; background-color: #ffffff; }
+.sf20b5i {color: #0051bb; background-color: #0078d7; }
+.sf20b14i {color: #ab6b96; background-color: #ffa0a0; }
+.sf20b16i {color: #a1979f; background-color: #f1e2ad; }
+.sf20b18i {color: #ab7282; background-color: #ffaa82; }
+.sf20b19i {color: #865772; background-color: #c8816c; }
+.sf21b2i {color: #abd5eb; background-color: #ffffff; }
+.sf21b5i {color: #007ad0; background-color: #0078d7; }
+.sf21b14i {color: #ab96aa; background-color: #ffa0a0; }
+.sf21b16i {color: #a1c2b3; background-color: #f1e2ad; }
+.sf21b18i {color: #ab9d96; background-color: #ffaa82; }
+.sf21b19i {color: #868187; background-color: #c8816c; }
+.ln {text-align: right; word-break: normal; color: #000000; background-color: #f0f0f0;}
+-->
+</style>
+</head>
+<body>
+	<h1>Austraeoh Chapter 48: Swept</h1>
+	<table cellspacing="0" cellpadding="0" style="width:100%;">
+<colgroup>
+<col style="width: 0.5em;" />
+<col style="width: calc(100% / 2 - 0.5em);" />
+<col style="width: 0.5em;" />
+<col style="width: calc(100% / 2 - 0.5em);" />
+</colgroup>
+<thead>
+<tr>
+<th colspan="2" class="title">Original Text</th>
+<th colspan="2" class="title">Audiobook Transcription</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ln"><a name="d1" href="#d1">.</a></td><td style="color: #000000; background-color: #efcb05; "><code><span style="color: #000000; background-color: #efcb05; ">“Gaaah!” Rainbow Dash grunted as she took the full brunt of the diving creature in her forelimbs. She was flung back hard onto the wooden platforms of Windthrow with a thrashing, stabbing monster at the end of her hooves. “No</span><span class="sf17b18">o</span><span style="color: #000000; background-color: #efcb05; ">&nbsp;good, blood sucking, bird brained, near-sighted, tarantula huffing, sonuva—</span><span class="sf17b16">“</span>&nbsp;</code></td>
+<td class="ln"></td><td style="color: #000000; background-color: #efcb05; "><code><span style="color: #000000; background-color: #efcb05; ">“Gaaah!” Rainbow Dash grunted as she took the full brunt of the diving creature in her forelimbs. She was flung back hard onto the wooden platforms of Windthrow with a thrashing, stabbing monster at the end of her hooves. “No</span><span style="color: #000000; background-color: #efcb05; ">&nbsp;good, blood sucking, bird brained, near-sighted, tarantula huffing, sonuva—</span><span class="sf17b16">”</span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Roll!” Gold Petals' voice shouted.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Roll!” Gold Petals' voice shouted.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Rainbow Dash gave her a crooked glance from beyond the monster's flailing limbs. “The heck?!”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Rainbow Dash gave her a crooked glance from beyond the monster's flailing limbs. “The heck?!”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Gold Petals pointed, her eyes wide. “Roll! Roll!”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Gold Petals pointed, her eyes wide. “Roll! Roll!”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Rainbow Dash looked to her left. A pile of sharp wooden splinters remained of the bucket. “Oh. Awesome! Raaaaugh!” She flung her body to the left. She and the creature barreled across the floor until she pressed its weight hard onto the sharp shards of debris.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Rainbow Dash looked to her left. A pile of sharp wooden splinters remained of the bucket. “Oh. Awesome! Raaaaugh!” She flung her body to the left. She and the creature barreled across the floor until she pressed its weight hard onto the sharp shards of debris.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">The creature let loose a hideous shriek. In its pain, it disentangled itself from Rainbow Dash and thrashed across the alleyway of Windthrow, bleeding.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">The creature let loose a hideous shriek. In its pain, it disentangled itself from Rainbow Dash and thrashed across the alleyway of Windthrow, bleeding.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Gold Petals rushed over to Rainbow Dash's side. “Are you okay?!”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Gold Petals rushed over to Rainbow Dash's side. “Are you okay?!”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Better than okay,” Rainbow Dash snarled and batted her away as she stood up. “Pissed!”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Better than okay,” Rainbow Dash snarled and batted her away as she stood up. “Pissed!”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">The monster flapped its wings and jumped upright. All of the citizens of Windthrow were alerted by that point. Stallions and mares and foals gasped in fright at the bleeding thing in the misty daylight. It spun about, hissing at every living thing collectively.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">The monster flapped its wings and jumped upright. All of the citizens of Windthrow were alerted by that point. Stallions and mares and foals gasped in fright at the bleeding thing in the misty daylight. It spun about, hissing at every living thing collectively.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Hey!” Rainbow Dash snarled and charged the invader. “Right here, gorgeous! If you wanna dance, you'd better know how to shimmy—”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Hey!” Rainbow Dash snarled and charged the invader. “Right here, gorgeous! If you wanna dance, you'd better know how to shimmy—”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">The creature's left wing uppercutted Rainbow Dash.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">The creature's left wing uppercutted Rainbow Dash.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"><a name="d2" href="#d2">.</a></td><td style="color: #000000; background-color: #efcb05; "><code><span style="color: #000000; background-color: #efcb05; ">“Ooof!” Rainbow Dash flew through Gold Petals</span><span style="color: #000000; background-color: #efcb05; ">&nbsp;cart, collapsing in a pile of debris.</span></code></td>
+<td class="ln"></td><td style="color: #000000; background-color: #efcb05; "><code><span style="color: #000000; background-color: #efcb05; ">“Ooof!” Rainbow Dash flew through Gold Petals</span><span class="sf17b18">'</span><span style="color: #000000; background-color: #efcb05; ">&nbsp;cart, collapsing in a pile of debris.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Nnngh!” Gold Petals gripped a wooden club in her teeth and slammed the weight of it across the creature's hide.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Nnngh!” Gold Petals gripped a wooden club in her teeth and slammed the weight of it across the creature's hide.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">The monster reeled, rolled through piles of dust, and flapped spasmatically in the middle of the street. By that time, four stallions in leather armor had galloped up. Flanking them was none other than Sladesteed. With bright eyes, he pointed and shouted at his guards. “Quick! Kill it! Don't give it a chance to fly away!”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">The monster reeled, rolled through piles of dust, and flapped spasmatically in the middle of the street. By that time, four stallions in leather armor had galloped up. Flanking them was none other than Sladesteed. With bright eyes, he pointed and shouted at his guards. “Quick! Kill it! Don't give it a chance to fly away!”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Wait!”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Wait!”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Several ponies glanced over.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Several ponies glanced over.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Hushtail stood, trembling in the midst of two servants. He weakly trotted forward and stammered, “Capture it alive! Don't kill it!”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Hushtail stood, trembling in the midst of two servants. He weakly trotted forward and stammered, “Capture it alive! Don't kill it!”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Father, are you crazy?!” Sladesteed shouted above the murmur of the crowd. His fellow ponies stirred nervously by his side. “This thing is the spawn of Tartarus!” He turned towards his cohorts once more. “Slay it immediately—!”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Father, are you crazy?!” Sladesteed shouted above the murmur of the crowd. His fellow ponies stirred nervously by his side. “This thing is the spawn of Tartarus!” He turned towards his cohorts once more. “Slay it immediately—!”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"><a name="d3" href="#d3">.</a></td><td style="color: #000000; background-color: #efcb05; "><code><span style="color: #000000; background-color: #efcb05; ">“If we don't go about this reasonably,” Hushtail growled</span><span style="color: #000000; background-color: #efcb05; ">&nbsp;“</span><span class="sf17b16">W</span><span style="color: #000000; background-color: #efcb05; ">e won't ever put a stop to this mayhem!”</span></code></td>
+<td class="ln"></td><td style="color: #000000; background-color: #efcb05; "><code><span style="color: #000000; background-color: #efcb05; ">“If we don't go about this reasonably,” Hushtail growled</span><span class="sf17b18">,</span><span style="color: #000000; background-color: #efcb05; ">&nbsp;“</span><span class="sf17b16">w</span><span style="color: #000000; background-color: #efcb05; ">e won't ever put a stop to this mayhem!”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Father, there's never going to be a stop to it no matter what we do!”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Father, there's never going to be a stop to it no matter what we do!”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"><a name="d4" href="#d4">.</a></td><td style="color: #000000; background-color: #efcb05; "><code><span style="color: #000000; background-color: #efcb05; ">“Why must you constantly challenge</span><span class="sf17b18">d</span><span style="color: #000000; background-color: #efcb05; ">&nbsp;my wisdom—?!”</span></code></td>
+<td class="ln"></td><td style="color: #000000; background-color: #efcb05; "><code><span style="color: #000000; background-color: #efcb05; ">“Why must you constantly challenge</span><span style="color: #000000; background-color: #efcb05; ">&nbsp;my wisdom—?!”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Aaaaugh!” Rainbow Dash burst loudly out of the remains of the cart. “For the love of cider, shut up! You two are worse than a flying squadron of bat monkey spiders anyday!” She yanked a wheel off the wagon, spun her body, and flung the thing like a disc at the monster. “Haaaugh—Your mother!”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Aaaaugh!” Rainbow Dash burst loudly out of the remains of the cart. “For the love of cider, shut up! You two are worse than a flying squadron of bat monkey spiders anyday!” She yanked a wheel off the wagon, spun her body, and flung the thing like a disc at the monster. “Haaaugh—Your mother!”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">The twirling wheel flew past the creature, for it had dodged at the last second. It flew through the air and sliced its way straight over Rainbow Dash's billowing mane.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">The twirling wheel flew past the creature, for it had dodged at the last second. It flew through the air and sliced its way straight over Rainbow Dash's billowing mane.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">The pegasus gasped and spun around. Her eyes widened as she saw the beast's trajectory.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">The pegasus gasped and spun around. Her eyes widened as she saw the beast's trajectory.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">It flew over the crowd, spiraled past Sladesteed and his comrades, and jabbed its legs down just in time to reach into the dense forest of ponies... and sweep a shrieking foal up off his hooves.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">It flew over the crowd, spiraled past Sladesteed and his comrades, and jabbed its legs down just in time to reach into the dense forest of ponies... and sweep a shrieking foal up off his hooves.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"><a name="d5" href="#d5">.</a></td><td style="color: #000000; background-color: #efcb05; "><code><span style="color: #000000; background-color: #efcb05; ">“Unnngh—Aaaah! Mommy!” the little colt wailed as he was swept into the dense mists beyond the village's </span><span class="sf17b16">w</span><span style="color: #000000; background-color: #efcb05; ">ailing.</span></code></td>
+<td class="ln"></td><td style="color: #000000; background-color: #efcb05; "><code><span style="color: #000000; background-color: #efcb05; ">“Unnngh—Aaaah! Mommy!” the little colt wailed as he was swept into the dense mists beyond the village's </span><span class="sf17b16">r</span><span style="color: #000000; background-color: #efcb05; ">ailing.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">A mare reached out for him, sobbing hysterically. Before she could plunge off into the mountainside, none other than Red Turnip held her down.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">A mare reached out for him, sobbing hysterically. Before she could plunge off into the mountainside, none other than Red Turnip held her down.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Somepony! Anypony!” Red Turnip shouted, his face flung between anger and sheer horror. “Help! It's snatched my bro! That stupid demon filth's got my little brother!”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Somepony! Anypony!” Red Turnip shouted, his face flung between anger and sheer horror. “Help! It's snatched my bro! That stupid demon filth's got my little brother!”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Hushtail's face went pale. A shudder of despair swam through the crowd. Once it reached, Gold Petals, she was nearly in tears. With a quivering lip, she looked over and murmured, “Rainbow...?”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Hushtail's face went pale. A shudder of despair swam through the crowd. Once it reached, Gold Petals, she was nearly in tears. With a quivering lip, she looked over and murmured, “Rainbow...?”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">The pegasus was already gone, her blue wings slicing a path directly after the leathery foalnapper.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">The pegasus was already gone, her blue wings slicing a path directly after the leathery foalnapper.</span></code></td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
