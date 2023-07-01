@@ -1,0 +1,555 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WinMerge File Compare Report</title>
+<style type="text/css">
+<!--
+table {margin: 0; border: 1px solid #a0a0a0; box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);}
+td,th {word-break: break-all; font-size: 12pt;padding: 0 3px;}
+tr { vertical-align: top; }
+.title {color: white; background-color: blue; vertical-align: top; padding: 4px 4px; background: linear-gradient(mediumblue, darkblue);}
+.sf3b2 {color: #000000; background-color: #ffffff; }
+.sf3b5 {color: #000000; background-color: #0078d7; }
+.sf3b14 {color: #000000; background-color: #ffa0a0; }
+.sf3b16 {color: #000000; background-color: #f1e2ad; }
+.sf3b18 {color: #000000; background-color: #ffaa82; }
+.sf3b19 {color: #000000; background-color: #c8816c; }
+.sf6b2 {color: #ffffff; background-color: #ffffff; }
+.sf6b5 {color: #ffffff; background-color: #0078d7; }
+.sf6b14 {color: #ffffff; background-color: #ffa0a0; }
+.sf6b16 {color: #ffffff; background-color: #f1e2ad; }
+.sf6b18 {color: #ffffff; background-color: #ffaa82; }
+.sf6b19 {color: #ffffff; background-color: #c8816c; }
+.sf7b2 {color: #0000ff; background-color: #ffffff; font-weight: bold; }
+.sf7b5 {color: #0000ff; background-color: #0078d7; font-weight: bold; }
+.sf7b14 {color: #0000ff; background-color: #ffa0a0; font-weight: bold; }
+.sf7b16 {color: #0000ff; background-color: #f1e2ad; font-weight: bold; }
+.sf7b18 {color: #0000ff; background-color: #ffaa82; font-weight: bold; }
+.sf7b19 {color: #0000ff; background-color: #c8816c; font-weight: bold; }
+.sf8b2 {color: #800080; background-color: #ffffff; }
+.sf8b5 {color: #800080; background-color: #0078d7; }
+.sf8b14 {color: #800080; background-color: #ffa0a0; }
+.sf8b16 {color: #800080; background-color: #f1e2ad; }
+.sf8b18 {color: #800080; background-color: #ffaa82; }
+.sf8b19 {color: #800080; background-color: #c8816c; }
+.sf9b2 {color: #008000; background-color: #ffffff; }
+.sf9b5 {color: #008000; background-color: #0078d7; }
+.sf9b14 {color: #008000; background-color: #ffa0a0; }
+.sf9b16 {color: #008000; background-color: #f1e2ad; }
+.sf9b18 {color: #008000; background-color: #ffaa82; }
+.sf9b19 {color: #008000; background-color: #c8816c; }
+.sf10b2 {color: #ff0000; background-color: #ffffff; }
+.sf10b5 {color: #ff0000; background-color: #0078d7; }
+.sf10b14 {color: #ff0000; background-color: #ffa0a0; }
+.sf10b16 {color: #ff0000; background-color: #f1e2ad; }
+.sf10b18 {color: #ff0000; background-color: #ffaa82; }
+.sf10b19 {color: #ff0000; background-color: #c8816c; }
+.sf11b2 {color: #606060; background-color: #ffffff; }
+.sf11b5 {color: #606060; background-color: #0078d7; }
+.sf11b14 {color: #606060; background-color: #ffa0a0; }
+.sf11b16 {color: #606060; background-color: #f1e2ad; }
+.sf11b18 {color: #606060; background-color: #ffaa82; }
+.sf11b19 {color: #606060; background-color: #c8816c; }
+.sf12b2 {color: #800000; background-color: #ffffff; }
+.sf12b5 {color: #800000; background-color: #0078d7; }
+.sf12b14 {color: #800000; background-color: #ffa0a0; }
+.sf12b16 {color: #800000; background-color: #f1e2ad; }
+.sf12b18 {color: #800000; background-color: #ffaa82; }
+.sf12b19 {color: #800000; background-color: #c8816c; }
+.sf13b2 {color: #0080c0; background-color: #ffffff; }
+.sf13b5 {color: #0080c0; background-color: #0078d7; }
+.sf13b14 {color: #0080c0; background-color: #ffa0a0; }
+.sf13b16 {color: #0080c0; background-color: #f1e2ad; }
+.sf13b18 {color: #0080c0; background-color: #ffaa82; }
+.sf13b19 {color: #0080c0; background-color: #c8816c; }
+.sf15b2 {color: #000000; background-color: #ffffff; }
+.sf15b5 {color: #000000; background-color: #0078d7; }
+.sf15b14 {color: #000000; background-color: #ffa0a0; }
+.sf15b16 {color: #000000; background-color: #f1e2ad; }
+.sf15b18 {color: #000000; background-color: #ffaa82; }
+.sf15b19 {color: #000000; background-color: #c8816c; }
+.sf17b2 {color: #000000; background-color: #ffffff; }
+.sf17b5 {color: #000000; background-color: #0078d7; }
+.sf17b14 {color: #000000; background-color: #ffa0a0; }
+.sf17b16 {color: #000000; background-color: #f1e2ad; }
+.sf17b18 {color: #000000; background-color: #ffaa82; }
+.sf17b19 {color: #000000; background-color: #c8816c; }
+.sf20b2 {color: #000080; background-color: #ffffff; }
+.sf20b5 {color: #000080; background-color: #0078d7; }
+.sf20b14 {color: #000080; background-color: #ffa0a0; }
+.sf20b16 {color: #000080; background-color: #f1e2ad; }
+.sf20b18 {color: #000080; background-color: #ffaa82; }
+.sf20b19 {color: #000080; background-color: #c8816c; }
+.sf21b2 {color: #0080c0; background-color: #ffffff; }
+.sf21b5 {color: #0080c0; background-color: #0078d7; }
+.sf21b14 {color: #0080c0; background-color: #ffa0a0; }
+.sf21b16 {color: #0080c0; background-color: #f1e2ad; }
+.sf21b18 {color: #0080c0; background-color: #ffaa82; }
+.sf21b19 {color: #0080c0; background-color: #c8816c; }
+.sf3b2i {color: #ababab; background-color: #ffffff; }
+.sf3b5i {color: #005190; background-color: #0078d7; }
+.sf3b14i {color: #ab6b6b; background-color: #ffa0a0; }
+.sf3b16i {color: #a19774; background-color: #f1e2ad; }
+.sf3b18i {color: #ab7257; background-color: #ffaa82; }
+.sf3b19i {color: #865749; background-color: #c8816c; }
+.sf6b2i {color: #ffffff; background-color: #ffffff; }
+.sf6b5i {color: #54a4e4; background-color: #0078d7; }
+.sf6b14i {color: #ffbfbf; background-color: #ffa0a0; }
+.sf6b16i {color: #f5ebc8; background-color: #f1e2ad; }
+.sf6b18i {color: #ffc6ab; background-color: #ffaa82; }
+.sf6b19i {color: #daaa9c; background-color: #c8816c; }
+.sf7b2i {color: #ababff; background-color: #ffffff; font-weight: bold; }
+.sf7b5i {color: #0051e4; background-color: #0078d7; font-weight: bold; }
+.sf7b14i {color: #ab6bbf; background-color: #ffa0a0; font-weight: bold; }
+.sf7b16i {color: #a197c8; background-color: #f1e2ad; font-weight: bold; }
+.sf7b18i {color: #ab72ab; background-color: #ffaa82; font-weight: bold; }
+.sf7b19i {color: #86579c; background-color: #c8816c; font-weight: bold; }
+.sf8b2i {color: #d5abd5; background-color: #ffffff; }
+.sf8b5i {color: #2a51bb; background-color: #0078d7; }
+.sf8b14i {color: #d56b96; background-color: #ffa0a0; }
+.sf8b16i {color: #cc979f; background-color: #f1e2ad; }
+.sf8b18i {color: #d57282; background-color: #ffaa82; }
+.sf8b19i {color: #b15772; background-color: #c8816c; }
+.sf9b2i {color: #abd5ab; background-color: #ffffff; }
+.sf9b5i {color: #007a90; background-color: #0078d7; }
+.sf9b14i {color: #ab966b; background-color: #ffa0a0; }
+.sf9b16i {color: #a1c274; background-color: #f1e2ad; }
+.sf9b18i {color: #ab9d57; background-color: #ffaa82; }
+.sf9b19i {color: #868149; background-color: #c8816c; }
+.sf10b2i {color: #ffabab; background-color: #ffffff; }
+.sf10b5i {color: #545190; background-color: #0078d7; }
+.sf10b14i {color: #ff6b6b; background-color: #ffa0a0; }
+.sf10b16i {color: #f59774; background-color: #f1e2ad; }
+.sf10b18i {color: #ff7257; background-color: #ffaa82; }
+.sf10b19i {color: #da5749; background-color: #c8816c; }
+.sf11b2i {color: #cbcbcb; background-color: #ffffff; }
+.sf11b5i {color: #1f71b0; background-color: #0078d7; }
+.sf11b14i {color: #cb8b8b; background-color: #ffa0a0; }
+.sf11b16i {color: #c1b794; background-color: #f1e2ad; }
+.sf11b18i {color: #cb9277; background-color: #ffaa82; }
+.sf11b19i {color: #a67769; background-color: #c8816c; }
+.sf12b2i {color: #d5abab; background-color: #ffffff; }
+.sf12b5i {color: #2a5190; background-color: #0078d7; }
+.sf12b14i {color: #d56b6b; background-color: #ffa0a0; }
+.sf12b16i {color: #cc9774; background-color: #f1e2ad; }
+.sf12b18i {color: #d57257; background-color: #ffaa82; }
+.sf12b19i {color: #b15749; background-color: #c8816c; }
+.sf13b2i {color: #abd5eb; background-color: #ffffff; }
+.sf13b5i {color: #007ad0; background-color: #0078d7; }
+.sf13b14i {color: #ab96aa; background-color: #ffa0a0; }
+.sf13b16i {color: #a1c2b3; background-color: #f1e2ad; }
+.sf13b18i {color: #ab9d96; background-color: #ffaa82; }
+.sf13b19i {color: #868187; background-color: #c8816c; }
+.sf15b2i {color: #ababab; background-color: #ffffff; }
+.sf15b5i {color: #005190; background-color: #0078d7; }
+.sf15b14i {color: #ab6b6b; background-color: #ffa0a0; }
+.sf15b16i {color: #a19774; background-color: #f1e2ad; }
+.sf15b18i {color: #ab7257; background-color: #ffaa82; }
+.sf15b19i {color: #865749; background-color: #c8816c; }
+.sf17b2i {color: #ababab; background-color: #ffffff; }
+.sf17b5i {color: #005190; background-color: #0078d7; }
+.sf17b14i {color: #ab6b6b; background-color: #ffa0a0; }
+.sf17b16i {color: #a19774; background-color: #f1e2ad; }
+.sf17b18i {color: #ab7257; background-color: #ffaa82; }
+.sf17b19i {color: #865749; background-color: #c8816c; }
+.sf20b2i {color: #ababd5; background-color: #ffffff; }
+.sf20b5i {color: #0051bb; background-color: #0078d7; }
+.sf20b14i {color: #ab6b96; background-color: #ffa0a0; }
+.sf20b16i {color: #a1979f; background-color: #f1e2ad; }
+.sf20b18i {color: #ab7282; background-color: #ffaa82; }
+.sf20b19i {color: #865772; background-color: #c8816c; }
+.sf21b2i {color: #abd5eb; background-color: #ffffff; }
+.sf21b5i {color: #007ad0; background-color: #0078d7; }
+.sf21b14i {color: #ab96aa; background-color: #ffa0a0; }
+.sf21b16i {color: #a1c2b3; background-color: #f1e2ad; }
+.sf21b18i {color: #ab9d96; background-color: #ffaa82; }
+.sf21b19i {color: #868187; background-color: #c8816c; }
+.ln {text-align: right; word-break: normal; color: #000000; background-color: #f0f0f0;}
+-->
+</style>
+</head>
+<body>
+<table cellspacing="0" cellpadding="0" style="width:100%;">
+<colgroup>
+<col style="width: 0.5em;" />
+<col style="width: calc(100% / 2 - 0.5em);" />
+<col style="width: 0.5em;" />
+<col style="width: calc(100% / 2 - 0.5em);" />
+</colgroup>
+<thead>
+<tr>
+<th colspan="2" class="title">Untitled left</th>
+<th colspan="2" class="title">Untitled right</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Thunderhorn was not having a good day. He stood atop the roof to a wooden supply shed as raging rapids of muddied water flooded the quarry all around him. Just thirty feet away, a gigantic geyser of channeled liquid was being thrown violently into the air from where the metal pump had once resided. He snarled and shouted to several workers hurriedly wading past him.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Thunderhorn was not having a good day. He stood atop the roof to a wooden supply shed as raging rapids of muddied water flooded the quarry all around him. Just thirty feet away, a gigantic geyser of channeled liquid was being thrown violently into the air from where the metal pump had once resided. He snarled and shouted to several workers hurriedly wading past him.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Somebody get down there and twist the lateral valves! We have to cut off the incoming supply of water from the lake up north!”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Somebody get down there and twist the lateral valves! We have to cut off the incoming supply of water from the lake up north!”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"><a name="d1" href="#d1">.</a></td><td style="color: #000000; background-color: #efcb05; "><code><span style="color: #000000; background-color: #efcb05; ">“Sir!” </span><span class="sf17b16">A</span><span style="color: #000000; background-color: #efcb05; ">nother minotaur shouted. He clung to the body of the shed below, trying his best not to be swept away by the currents. “Half of us are still trying to sandbag off the tunnel—”</span></code></td>
+<td class="ln"></td><td style="color: #000000; background-color: #efcb05; "><code><span style="color: #000000; background-color: #efcb05; ">“Sir!” </span><span class="sf17b16">a</span><span style="color: #000000; background-color: #efcb05; ">nother minotaur shouted. He clung to the body of the shed below, trying his best not to be swept away by the currents. “Half of us are still trying to sandbag off the tunnel—”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Never mind that! The tunnel runs too deep to be completely flooded, and it's too late to save the equipment at the mouth of the corridor! We must put all effort into stopping the water flow!”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Never mind that! The tunnel runs too deep to be completely flooded, and it's too late to save the equipment at the mouth of the corridor! We must put all effort into stopping the water flow!”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Who caused all of this?! I just don't understand—”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Who caused all of this?! I just don't understand—”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“I don't pay you to understand! I pay you to do what I say!”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“I don't pay you to understand! I pay you to do what I say!”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"><a name="d2" href="#d2">.</a></td><td style="color: #000000; background-color: #efcb05; "><code><span style="color: #000000; background-color: #efcb05; ">“Then you must be rich enough to pay for new teeth!” </span><span class="sf17b16">A</span><span style="color: #000000; background-color: #efcb05; ">&nbsp;voice said above.</span></code></td>
+<td class="ln"></td><td style="color: #000000; background-color: #efcb05; "><code><span style="color: #000000; background-color: #efcb05; ">“Then you must be rich enough to pay for new teeth!” </span><span class="sf17b16">a</span><span style="color: #000000; background-color: #efcb05; ">&nbsp;voice said above.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Thunderhorn turned and looked skyward. “Huh?”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Thunderhorn turned and looked skyward. “Huh?”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Hi there!” Rainbow Dash soared down with two swinging hooves.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Hi there!” Rainbow Dash soared down with two swinging hooves.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Ooof!” Thunderhorn took the diving buck across the face. He spun twice, flailed, and fell into the waters.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Ooof!” Thunderhorn took the diving buck across the face. He spun twice, flailed, and fell into the waters.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">The minotaur below gasped. “A flying pony! How dare you strike the overseer?!”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">The minotaur below gasped. “A flying pony! How dare you strike the overseer?!”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Yeah. You're useless. Stop talking.” Rainbow Dash kicked a plank of wood loose from the shed so that it smacked the minotaur's skull. He fell back and was carried away by the currents of flood water. Without delay, Rainbow Dash flew down and perched herself atop Thunderhorn's squirming body. “Strips. Strips. Strips. Dang it—why's your belt gotta have so many pockets? Urp!” Her eyes crossed.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Yeah. You're useless. Stop talking.” Rainbow Dash kicked a plank of wood loose from the shed so that it smacked the minotaur's skull. He fell back and was carried away by the currents of flood water. Without delay, Rainbow Dash flew down and perched herself atop Thunderhorn's squirming body. “Strips. Strips. Strips. Dang it—why's your belt gotta have so many pockets? Urp!” Her eyes crossed.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Thunderhorn's hand had reached backwards to grip her by the throat. Blindly, he flung her against the wooden shack.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Thunderhorn's hand had reached backwards to grip her by the throat. Blindly, he flung her against the wooden shack.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Augh!” She landed against it and fell leg-deep in the waters.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Augh!” She landed against it and fell leg-deep in the waters.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Thunderhorn stood up, gnashing his teeth and wiping blood from his chin. “Such insolence!”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Thunderhorn stood up, gnashing his teeth and wiping blood from his chin. “Such insolence!”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Seriously...” Rainbow wheezed. “What's with you minotaurs and that stupid word?”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Seriously...” Rainbow wheezed. “What's with you minotaurs and that stupid word?”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“It was you who caused all this, wasn't it?!” He stood up straight, his strong body like a breaker against the churning waters billowing past his knees. “Did you really think you could fly here and destroy the work of fifty sturdy minotaurs all on your lonesome?”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“It was you who caused all this, wasn't it?!” He stood up straight, his strong body like a breaker against the churning waters billowing past his knees. “Did you really think you could fly here and destroy the work of fifty sturdy minotaurs all on your lonesome?”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Yeah, why not?”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Yeah, why not?”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“I'll be wearing your teeth as a necklace tonight!”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“I'll be wearing your teeth as a necklace tonight!”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“That's the worst pickup line I've ever heard.”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“That's the worst pickup line I've ever heard.”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Raaaugh!” Thunderhorn charged straight towards her.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Raaaugh!” Thunderhorn charged straight towards her.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Oh please. We can do this all day.” Rainbow Dash shot up before he could grab her. “Hah!” She stared down at him from a tall hover. “You couldn't hit the broad side of a—”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Oh please. We can do this all day.” Rainbow Dash shot up before he could grab her. “Hah!” She stared down at him from a tall hover. “You couldn't hit the broad side of a—”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">He struck the shed, and utterly demolished it. The wooden structure exploded in a sea of splinters as he stood there, snarling up at her.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">He struck the shed, and utterly demolished it. The wooden structure exploded in a sea of splinters as he stood there, snarling up at her.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Rainbow Dash blinked. “Yeah. I'm not getting anywhere near THAT.” She glanced all around the flooded quarry. “Uhhhh... Be right back.” She zoomed off.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Rainbow Dash blinked. “Yeah. I'm not getting anywhere near THAT.” She glanced all around the flooded quarry. “Uhhhh... Be right back.” She zoomed off.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Coward!” Thunderhorn shook his fist. “Typical pony! Leave it to a flying manure bag to not have a single ounce of courage in her body—”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Coward!” Thunderhorn shook his fist. “Typical pony! Leave it to a flying manure bag to not have a single ounce of courage in her body—”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Rainbow Dash flew up behind him, swinging a metal beam across the back of his skull. “I'm back!” He fell flatly into the water with a splash. She hovered down and planted the beam over his chin, holding it firmly in place with two hooves as she reached for the belt with her forward half. “Now to get what I came for...” She gripped the belt in her teeth, pulled hard, and snapped it off him. “Mmmmf... There. That wasn't so hard—”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Rainbow Dash flew up behind him, swinging a metal beam across the back of his skull. “I'm back!” He fell flatly into the water with a splash. She hovered down and planted the beam over his chin, holding it firmly in place with two hooves as she reached for the belt with her forward half. “Now to get what I came for...” She gripped the belt in her teeth, pulled hard, and snapped it off him. “Mmmmf... There. That wasn't so hard—”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Thunderhorn snapped the beam in two with his teeth, then gripped her tail-hairs in his jaws.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Thunderhorn snapped the beam in two with his teeth, then gripped her tail-hairs in his jaws.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Oh, ow. Yeah, that hurts. Ow. Ow!” Rainbow Dash squealed. As she was tugged back, she lost grip of the belt. She watched it plop uselessly into the floodwaters before she was pulled into a vicious body-hug.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Oh, ow. Yeah, that hurts. Ow. Ow!” Rainbow Dash squealed. As she was tugged back, she lost grip of the belt. She watched it plop uselessly into the floodwaters before she was pulled into a vicious body-hug.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Hah! Stupid cretin!” Thunderhorn gripped her skull from behind as water splashed all around them, dousing Rainbow Dash's coat and mane and saddlebag. The minotaur applied the pressure, straining at her neck muscles. “Is this the first time you've faced death?”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Hah! Stupid cretin!” Thunderhorn gripped her skull from behind as water splashed all around them, dousing Rainbow Dash's coat and mane and saddlebag. The minotaur applied the pressure, straining at her neck muscles. “Is this the first time you've faced death?”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“That depends!” She hissed and squirmed in his grasp. “Is this the first time you had a decent bath?!”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“That depends!” She hissed and squirmed in his grasp. “Is this the first time you had a decent bath?!”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“I'm going to mount your head for all the slaves to see.”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“I'm going to mount your head for all the slaves to see.”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"><a name="d3" href="#d3">.</a></td><td style="color: #000000; background-color: #efcb05; "><code><span style="color: #000000; background-color: #efcb05; ">“Well, that's one way to inspire somepony!” She wriggled her two lower legs free</span><span style="color: #000000; background-color: #efcb05; ">&nbsp;“Hey Butthorn! What's big and limp and bruised all over?”</span></code></td>
+<td class="ln"></td><td style="color: #000000; background-color: #efcb05; "><code><span style="color: #000000; background-color: #efcb05; ">“Well, that's one way to inspire somepony!” She wriggled her two lower legs free</span><span class="sf17b18">.</span><span style="color: #000000; background-color: #efcb05; ">&nbsp;“Hey Butthorn! What's big and limp and bruised all over?”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“If you think that you can delay the inevitable by—”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“If you think that you can delay the inevitable by—”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">She slammed both of her hooves into his crotch.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">She slammed both of her hooves into his crotch.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"><a name="d4" href="#d4">.</a></td><td style="color: #000000; background-color: #efcb05; "><code><span style="color: #000000; background-color: #efcb05; ">He wheezed, winced, but still kept h</span><span class="sf17b16">er</span><span style="color: #000000; background-color: #efcb05; ">&nbsp;hold on her. “Hah! I'm made of stronger stuff than that, you stupid horse—”</span></code></td>
+<td class="ln"></td><td style="color: #000000; background-color: #efcb05; "><code><span style="color: #000000; background-color: #efcb05; ">He wheezed, winced, but still kept h</span><span class="sf17b16">is</span><span style="color: #000000; background-color: #efcb05; ">&nbsp;hold on her. “Hah! I'm made of stronger stuff than that, you stupid horse—”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">She bucked him in the crotch again. And again. And again and again and again. Thunderous claps filled the air, sending rivulets of chaos surging through the currents around them. Thunderhorn's eyes gradually rolled back in his skull with each traumatic blow, until he squeaked something unintelligibly high-pitched and finally let go of Rainbow Dash.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">She bucked him in the crotch again. And again. And again and again and again. Thunderous claps filled the air, sending rivulets of chaos surging through the currents around them. Thunderhorn's eyes gradually rolled back in his skull with each traumatic blow, until he squeaked something unintelligibly high-pitched and finally let go of Rainbow Dash.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"><a name="d5" href="#d5">.</a></td><td style="color: #000000; background-color: #efcb05; "><code><span style="color: #000000; background-color: #efcb05; ">She flew out of his body with a g</span><span class="sf17b18">r</span><span style="color: #000000; background-color: #efcb05; ">asp and dog-paddled through the currents. “Whew...! And that's why no self-respecting idiot picks a fight with a quadruped!” She smirked over her shoulder. “Good luck making little minotaurs the day you go back home to the 'Bluffs of Thunder' or whatever the heck you stupid walking cows hail from!”</span></code></td>
+<td class="ln"></td><td style="color: #000000; background-color: #efcb05; "><code><span style="color: #000000; background-color: #efcb05; ">She flew out of his body with a g</span><span style="color: #000000; background-color: #efcb05; ">asp and dog-paddled through the currents. “Whew...! And that's why no self-respecting idiot picks a fight with a quadruped!” She smirked over her shoulder. “Good luck making little minotaurs the day you go back home to the 'Bluffs of Thunder' or whatever the heck you stupid walking cows hail from!”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Thunderhorn merely curled into a ball as the waters raged around him.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Thunderhorn merely curled into a ball as the waters raged around him.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"><a name="d6" href="#d6">.</a></td><td style="color: #000000; background-color: #efcb05; "><code><span style="color: #000000; background-color: #efcb05; ">In the meantime, Rainbow Dash flapped her wings and skimmed over the waves. “Come on. Come on. Come on...” She scanned the currents with her ruby eyes, and gasped upon spotting the belt. “Ah-HA!” She flew in and snatched </span><span class="sf17b16">I</span><span style="color: #000000; background-color: #efcb05; ">&nbsp;up with her teeth. The moment she did so, her eyes flickered from white to yellow and back. “Unnngh...” She reeled momentarily, almost falling deep into the water as the dizziness came and went. “Mmmf... Whew...” She felt the weight of the chaos metal inside the thing. Rather than risk opening it and becoming more dizzy, she spun around and made for the mouth of the mining tunnel. As she did so, an explosion went off behind her. She glanced back and gawked at the sight of the geyser of water doubling in intensity. Minotaurs were rushing all around it, desperate to stop the source of the flood.</span></code></td>
+<td class="ln"></td><td style="color: #000000; background-color: #efcb05; "><code><span style="color: #000000; background-color: #efcb05; ">In the meantime, Rainbow Dash flapped her wings and skimmed over the waves. “Come on. Come on. Come on...” She scanned the currents with her ruby eyes, and gasped upon spotting the belt. “Ah-HA!” She flew in and snatched </span><span class="sf17b16">it</span><span style="color: #000000; background-color: #efcb05; ">&nbsp;up with her teeth. The moment she did so, her eyes flickered from white to yellow and back. “Unnngh...” She reeled momentarily, almost falling deep into the water as the dizziness came and went. “Mmmf... Whew...” She felt the weight of the chaos metal inside the thing. Rather than risk opening it and becoming more dizzy, she spun around and made for the mouth of the mining tunnel. As she did so, an explosion went off behind her. She glanced back and gawked at the sight of the geyser of water doubling in intensity. Minotaurs were rushing all around it, desperate to stop the source of the flood.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">With no time to waste, Rainbow Dash held the belt tight in her jaws and flew swiftly towards the tunnel where the prisoners were fleeing even deeper.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">With no time to waste, Rainbow Dash held the belt tight in her jaws and flew swiftly towards the tunnel where the prisoners were fleeing even deeper.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Behind her, Thunderhorn finally stood up. Two minotaurs rushed up to his side.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">Behind her, Thunderhorn finally stood up. Two minotaurs rushed up to his side.</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Overseer! Are you alright?”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Overseer! Are you alright?”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“What did that wretched pony do to you?”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“What did that wretched pony do to you?”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Never mind th—” Thunderhorn tried to say. Legs-crossed, he cleared his throat and regained the deepness in his voice. “Never mind that.” He glared towards the mineshaft at the south end of the quarry. “We must give pursuit.”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“Never mind th—” Thunderhorn tried to say. Legs-crossed, he cleared his throat and regained the deepness in his voice. “Never mind that.” He glared towards the mineshaft at the south end of the quarry. “We must give pursuit.”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“But sir! The quarry! It's ruined enough as it is! Shouldn't we stop the flood—”</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“But sir! The quarry! It's ruined enough as it is! Shouldn't we stop the flood—”</span></code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln"></td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“She has my belt! Everything will be for nothing if she gets away with it!” Thunderhorn shouted. He glanced all around, and pointed towards a pile of equipment. “There! Follow me, brothers. This isn't over.” With his companions in tow, he waded across the quarry.</span></code></td>
+<td class="ln"></td><td class="sf3b2"><code><span class="sf3b2">“She has my belt! Everything will be for nothing if she gets away with it!” Thunderhorn shouted. He glanced all around, and pointed towards a pile of equipment. “There! Follow me, brothers. This isn't over.” With his companions in tow, he waded across the quarry.</span></code></td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
